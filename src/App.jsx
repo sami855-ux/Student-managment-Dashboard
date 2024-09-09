@@ -1,7 +1,18 @@
-export default function App() {
+import { BrowserRouter, Route, Routes } from "react-router-dom"
+
+import Homepage from "./Pages/Homepage"
+
+function App() {
   return (
-    <div>
-      <h2>Samuel Tale</h2>
-    </div>
+    <>
+      <BrowserRouter>
+        <Routes>
+          <Route index element={<Homepage />} />
+          <Route path="*" element={<p>Page No found!</p>} />
+        </Routes>
+      </BrowserRouter>
+    </>
   )
 }
+
+export default App

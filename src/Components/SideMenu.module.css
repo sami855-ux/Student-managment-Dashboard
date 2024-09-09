@@ -1,0 +1,140 @@
+.wrapper {
+  width: 300px;
+  height: 100vh;
+  background-color: #fff;
+  border-right: 1px solid #e1e0e0;
+  padding: 15px 0;
+}
+.logo {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 64px;
+  gap: 10px;
+  padding: 0 15px;
+}
+.logo img {
+  width: 52px;
+  height: 52px;
+  object-fit: contain;
+}
+.logo h2 {
+  color: rgb(22, 177, 22);
+  font-size: 18px;
+  font-family: sans-serif;
+  word-spacing: 1px;
+  letter-spacing: -1px;
+  font-weight: bolder;
+}
+.menu {
+  width: 100%;
+  height: calc(100vh - 84px);
+  padding: 15px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.menu li {
+  list-style: none;
+  padding: 5px 0;
+  margin-block: 2px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  /* padding-left: 15px; */
+  padding-left: 2px;
+  cursor: pointer;
+}
+.menu a {
+  text-decoration: none;
+}
+.menu a li .indictor {
+  width: 3px;
+  height: 30px;
+  background-color: transparent;
+  border-top-right-radius: 4px;
+  border-bottom-right-radius: 4px;
+}
+.menu a:global(.active) li .indictor {
+  background-color: green;
+}
+.menu a:global(.active) li p {
+  color: rgb(31, 188, 31);
+  font-weight: 600;
+}
+.menu a:global(.active) li svg {
+  color: rgb(31, 188, 31);
+  font-weight: 600;
+}
+.menu h4 {
+  padding: 17px 12px 0;
+  font-size: 14px;
+  color: rgb(73, 72, 72);
+}
+.menu li p {
+  font-size: 13px;
+  color: rgb(113, 111, 111);
+  font-weight: 500;
+}
+.menu li svg {
+  color: gray;
+  font-weight: 800;
+  height: 2em;
+  width: 1.5em;
+}
+.helpWrap {
+  width: 80%;
+  margin: 0 auto;
+  height: 300px;
+  background-color: gray;
+  margin-top: 15px;
+  position: relative;
+  border-radius: 7px;
+  background-image: url(../../public/img/img-1.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.circle {
+  position: absolute;
+  top: -25px;
+  left: 38%;
+  width: 55px;
+  height: 55px;
+  background-color: #333;
+  border: 8px solid #fff;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.helpWrap h2 {
+  color: #f1f1f1;
+  font-size: 16px;
+  font-family: sans-serif;
+  padding-bottom: 7px;
+  margin-top: 10px;
+}
+.helpWrap p {
+  text-align: center;
+  font-family: sans-serif;
+  font-size: 12px;
+  color: #f1f1f1;
+  padding-inline: 10px;
+}
+.helpWrap button {
+  width: 150px;
+  font-family: sans-serif;
+  font-size: 11px;
+  font-weight: 600;
+  padding-block: 4px;
+  border: none;
+  outline: none;
+  margin-top: 15px;
+  border-radius: 7px;
+  cursor: pointer;
+}
