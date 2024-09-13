@@ -1,0 +1,264 @@
+.wrapper {
+  width: 100%;
+  height: 90vh;
+  display: flex;
+  justify-content: center;
+  background-color: var(--secondary-bg);
+}
+.contianer {
+  width: 60%;
+  height: 85vh;
+  margin: 7px auto;
+  padding: 10px 7px 20px;
+}
+.header {
+  width: 100%;
+  height: 64px;
+  padding-inline: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.profile {
+  width: 200px;
+  height: fit-content;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 7px;
+}
+.stepWrapper {
+  width: 100%;
+  height: 45px;
+  margin-top: 15px;
+  position: relative;
+}
+
+.steps {
+  width: 100%;
+  height: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.steps .circles {
+  width: 39px;
+  height: 39px;
+  border-radius: 50%;
+  border: 3px solid rgb(212, 246, 212);
+  background-color: var(--secondary-bg);
+  font-size: 13px;
+  position: relative;
+  z-index: 20;
+  transition: all 0.2s ease;
+}
+.circles.active {
+  border-color: rgb(23, 233, 23);
+}
+.progress {
+  position: absolute;
+  top: 0;
+  width: 0%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  transition: all 0.2s ease;
+}
+.progress .indictor {
+  width: 100%;
+  height: 4px;
+  background-color: rgb(23, 233, 23);
+}
+
+.buttons {
+  width: 100%;
+  height: 64px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  justify-content: flex-end;
+}
+.buttons button {
+  width: 120px;
+  padding: 4px 2px;
+  cursor: pointer;
+  background-color: rgb(75, 198, 75);
+  color: var(--primary-bg);
+  font-size: 12px;
+  border: none;
+  border-radius: 4px;
+}
+.buttons button:disabled {
+  background-color: rgb(132, 240, 132);
+  border-color: rgb(132, 240, 132);
+  pointer-events: none;
+}
+.profile img {
+  width: 35px;
+  height: 35px;
+  border: none;
+  border-radius: 50%;
+  object-fit: cover;
+}
+.header section h2 {
+  font-weight: 600;
+}
+.header section span {
+  font-size: 12px;
+  font-family: sans-serif;
+}
+.contianer h2 {
+  font-weight: 600;
+  padding-bottom: 3px;
+}
+
+.contianer p {
+  font-size: 13px;
+  font-family: sans-serif;
+}
+.form {
+  width: 100%;
+  height: 50vh;
+  margin-top: 15px;
+  display: flex;
+  flex-direction: column;
+}
+.input {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  margin-block: 9px;
+}
+.inputSpe {
+  width: 100%;
+  display: flex;
+  margin-bottom: 12px;
+  align-items: center;
+  gap: 80px;
+}
+input {
+  background-color: transparent;
+}
+.input label {
+  font-size: 12px;
+  font-weight: 600;
+  padding-bottom: 5px;
+  color: rgb(64, 62, 62);
+}
+.input input {
+  width: 90%;
+  padding: 6px;
+  border: 1px solid rgb(170, 166, 166);
+  border-radius: 3px;
+  font-family: poppins;
+  font-size: 12px;
+  outline: none;
+}
+.input input:focus {
+  border-color: green;
+}
+
+.gender {
+  width: 20%;
+}
+.gender label {
+  font-weight: 600;
+  font-size: 12px;
+}
+.gender div {
+  display: flex;
+  gap: 15px;
+  height: 16px;
+  align-items: center;
+  width: 100%;
+}
+.gender div span {
+  display: flex;
+  align-items: center;
+  height: inherit;
+  gap: 7px;
+}
+.gender div span input {
+  cursor: pointer;
+}
+.age {
+  width: 350px;
+  display: flex;
+  flex-direction: column;
+}
+.age label {
+  font-weight: 600;
+  font-size: 12px;
+}
+.age input {
+  width: 100%;
+  border: 1px solid gray;
+  padding: 4px 5px;
+  border-radius: 3px;
+  outline: none;
+}
+.input .subject {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  margin-top: 5px;
+}
+.subject article {
+  display: flex;
+  gap: 10px;
+  width: 100%;
+  height: 20px;
+  align-items: flex-end;
+  margin-bottom: 5px;
+}
+.subject article span {
+  font-size: 12px;
+  width: 50px;
+  font-weight: 600;
+}
+.subject article input {
+  border: none;
+  border-bottom: 1px solid gray;
+  border-radius: 0;
+  width: 70%;
+  height: 20px;
+  transition: 0.2s ease;
+}
+.subject article input:focus {
+  border-color: forestgreen;
+}
+.btn {
+  width: 100%;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 15px;
+}
+.btn button {
+  width: 120px;
+  padding: 4px 0;
+  font-family: sans-serif;
+  font-size: 12px;
+  border-radius: 3px;
+  cursor: pointer;
+}
+.cancel {
+  border: 1px solid rgb(54, 52, 52);
+  background-color: #222;
+  color: var(--primary-bg);
+}
+.add {
+  border: 1px solid rgb(209, 200, 200);
+}
+.total {
+  margin-top: 7px;
+}
+.total span {
+  width: 50px;
+  font-weight: 600;
+}
+.total input {
+  width: 70%;
+  margin-left: 5px;
+}
