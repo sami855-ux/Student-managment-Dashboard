@@ -1,0 +1,119 @@
+.wrapper {
+  display: flex;
+}
+.container {
+  width: 100vw;
+  margin-left: 270px;
+  min-height: 100vh;
+  padding: 15px;
+  color: var(--text-color);
+}
+.header {
+  margin-top: 10px;
+  width: 100%;
+  height: 37px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-inline-end: 20px;
+}
+.header span {
+  font-size: 12px;
+  font-family: sans-serif;
+}
+.header button {
+  height: 80%;
+  width: 170px;
+  font-family: sans-serif;
+  font-size: 12px;
+  border: 1px solid rgb(11, 185, 11);
+  background-color: rgb(12, 179, 12);
+  border-radius: 7px;
+  cursor: pointer;
+}
+.header button a {
+  color: var(--secondary-bg);
+  text-decoration: none;
+}
+.container ul {
+  width: 100%;
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+  margin-top: 7px;
+  list-style: none;
+}
+.content {
+  width: 100%;
+  height: 35px;
+  display: flex;
+  align-items: center;
+  padding-inline: 5px;
+  background-color: rgb(244, 249, 245);
+  border-radius: 5px;
+}
+.studentName {
+  width: 40%;
+  height: fit-content;
+  font-size: 13px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-inline-end: 15px;
+}
+.gender,
+.mark,
+.grade,
+.status {
+  font-size: 13px;
+  font-weight: 600;
+  width: 10%;
+  text-transform: capitalize;
+}
+.school {
+  font-size: 13px;
+  font-weight: 600;
+  width: 20%;
+  text-transform: capitalize;
+}
+.container ul a {
+  text-decoration: none;
+  color: #333;
+}
+.container ul li {
+  height: 40px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  background-color: var(--secondary-bg);
+  padding-inline: 7px;
+  border-bottom: 1px solid rgb(238, 236, 236);
+  cursor: pointer;
+}
+.container ul li:hover {
+  background-color: rgb(206, 240, 194);
+}
+.container ul li span {
+  font-size: 12px;
+}
+.each-name {
+  width: 40%;
+}
+.each-gender {
+  width: 10%;
+}
+.each-school {
+  width: 20%;
+}
+.each-action {
+  width: 10%;
+  height: 100%;
+  display: flex;
+  gap: 5px;
+  align-items: center;
+}
+.paginationCon {
+  width: 100%;
+  height: 100px;
+}
