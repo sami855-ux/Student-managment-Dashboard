@@ -6,7 +6,7 @@ function SideMenu() {
   return (
     <div className={styles.wrapper}>
       <section className={styles.logo}>
-        <img src="./img/logo.png" alt="Logo" />
+        <img src="../../public/img/logo.png" alt="Logo" />
         <h2> Admin Store</h2>
       </section>
       <ul className={styles.menu}>
@@ -43,6 +43,7 @@ function SideMenu() {
         />
         <LinkMenu
           title="DataBase"
+          to="/database"
           icon={
             <svg
               stroke="currentColor"
