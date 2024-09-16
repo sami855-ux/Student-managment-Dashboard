@@ -1,0 +1,64 @@
+{
+  "student": [
+    {
+      "id": "00001",
+      "fristName": "Samuel",
+      "fatherName": "Tale",
+      "grandFatherName": "Dejene",
+      "gender": "M",
+      "grade": "12",
+      "section": "a",
+      "school": "mehal meda secobdary school",
+      "mark": {
+        "math": 77,
+        "english": 89,
+        "amharic": 92,
+        "biology": 97,
+        "chemistry": 89,
+        "physics": 84,
+        "sport": 88
+      },
+      "residency": "mehal meda"
+    },
+    {
+      "id": "00002",
+      "fristName": "hirut",
+      "fatherName": "Tale",
+      "grandFatherName": "Dejene",
+      "gender": "F",
+      "grade": "11",
+      "section": "c",
+      "school": "Baso secobdary school",
+      "mark": {
+        "math": 77,
+        "english": 89,
+        "amharic": 92,
+        "biology": 97,
+        "chemistry": 89,
+        "physics": 84,
+        "sport": 88
+      },
+      "residency": "debre brihan"
+    },
+    {
+      "id": "00003",
+      "fristName": "habtamu",
+      "fatherName": "befkadu",
+      "grandFatherName": "aygefu",
+      "gender": "M",
+      "grade": "9",
+      "section": "y",
+      "school": "Hailmariyam secobdary school",
+      "mark": {
+        "math": 77,
+        "english": 89,
+        "amharic": 92,
+        "biology": 97,
+        "chemistry": 89,
+        "physics": 84,
+        "sport": 88
+      },
+      "residency": "debre brihan"
+    }
+  ]
+}
