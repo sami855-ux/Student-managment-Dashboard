@@ -1,5 +1,124 @@
 .wrapper {
-  width: 100vw;
+  width: calc(100vw - 270px);
   height: 100%;
   margin-left: 270px;
+  padding: 20px;
+}
+.go-back {
+  width: fit-content;
+  height: 35px;
+  font-weight: 600;
+  color: var(--secondary-text-color);
+  cursor: pointer;
+}
+.go-back span {
+  margin-inline: 2px;
+  font-size: 22px;
+}
+.postCont {
+  width: 60vw;
+  height: 85vh;
+  padding: 8px;
+}
+.postCont h2 {
+  color: var(--secondary-text-color);
+  font-weight: 600;
+  font-size: 20px;
+  padding-bottom: 10px;
+  margin-block: 15px;
+}
+.postTable {
+  width: 100%;
+  height: 450px;
+  display: flex;
+  flex-direction: column;
+}
+.tableHeader {
+  width: 100%;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  padding-inline: 5px;
+  border-bottom: 1px solid rgb(219, 232, 218);
+}
+.title {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  font-weight: 600;
+  font-size: 12px;
+  color: var(--secondary-text-color);
+}
+.author {
+  width: 22%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  font-weight: 600;
+  font-size: 12px;
+  color: var(--secondary-text-color);
+}
+.date {
+  width: 15%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  font-weight: 600;
+  font-size: 12px;
+}
+.dataRow {
+  width: 100%;
+  height: 42px;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid rgb(196, 212, 197);
+  margin-block: 3px;
+  padding-block: 3px;
+}
+.dataTitle {
+  width: 48%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  font-size: 12px;
+}
+.dataAuthor {
+  width: 25%;
+  font-size: 12px;
+}
+.dataDate {
+  width: 15%;
+  display: flex;
+  align-items: center;
+  font-size: 12px;
+  justify-content: flex-end;
+  font-size: 12px;
+}
+.edit {
+  width: 10%;
+  margin-left: 5px;
+  display: flex;
+  align-items: center;
+  font-size: 12px;
+  justify-content: flex-end;
+}
+.edit a {
+  text-decoration: none;
+  color: rgb(196, 212, 197);
+}
+.edit span {
+  display: flex;
+  align-items: center;
+  font-size: 12px;
+  justify-content: center;
+  width: 60px;
+  height: 80%;
+  border: 1px solid rgb(66, 111, 235);
+  color: var(--primary-bg);
+  margin-left: 12px;
+  padding: 3px 0;
+  background-color: rgb(66, 111, 235);
+  border-radius: 7px;
+  cursor: pointer;
 }
