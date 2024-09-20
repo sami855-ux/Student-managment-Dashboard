@@ -1,6 +1,26 @@
+import { useEffect, useState } from "react"
 import { Link } from "react-router-dom"
+import PropTypes from "prop-types"
+
 import SideMenu from "../Components/SideMenu"
 import styles from "./Database.module.css"
+import Spinner from "../Components/Spinner"
+
+const URL = "http://localhost:1234/student"
+
+function capitalizedName(fullname) {
+  const splitedName = fullname.split(" ")
+
+  let nameArr = []
+
+  splitedName.forEach((name) => {
+    let fristLetter = name[0].toUpperCase()
+    let full = `${fristLetter}${name.slice(1)}`
+    nameArr.push(full)
+  })
+
+  return nameArr.join(" ")
+}
 
 function Database() {
   return (
@@ -10,9 +30,34 @@ function Database() {
     </div>
   )
 }
-//! Pagination
 
 function DataStore() {
+  const [studentData, setStudentData] = useState([])
+  const [isLoading, setIsLoading] = useState(false)
+
+  //!Pagination Logic Here
+
+  useEffect(function () {
+    async function fetchStudent() {
+      try {
+        setIsLoading(true)
+        const res = await fetch(URL)
+        const data = await res.json()
+
+        if (!data.length > 0) {
+          throw new Error("There is no data from the server")
+        }
+
+        setStudentData(data)
+      } catch (err) {
+        console.log(err.message)
+      } finally {
+        setIsLoading(false)
+      }
+    }
+    fetchStudent()
+  }, [])
+
   return (
     <div className={styles.container}>
       <h2>Database</h2>
@@ -46,23 +91,22 @@ function DataStore() {
           <span className={styles.status}>Action</span>
         </section>
 
-        <List />
-        <List />
-        <List />
-        <List />
-        <List />
-        <List />
-        <List />
-        <List />
-        <List />
-        <List />
-        <List />
-        <List />
-        <List />
-        <List />
-        <List />
-        <List />
-        <List />
+        <>
+          {isLoading && <Spinner />}
+          {studentData && studentData.length > 0
+            ? studentData.map((student, studentIndex) => (
+                <List
+                  fullName={`${student.fristName} ${student.fatherName} ${student.grandFatherName}`}
+                  gender={student.gender}
+                  section={`${student.grade} th ${student.section}`}
+                  school={student.school}
+                  mark={student.mark}
+                  id={student.id}
+                  key={studentIndex}
+                />
+              ))
+            : null}
+        </>
       </ul>
       {/* Pagination */}
       <div className={styles.paginationCon}></div>
@@ -70,41 +114,48 @@ function DataStore() {
   )
 }
 
-function List() {
+function List({ fullName, gender, section, school, mark, id }) {
+  let arr = []
+  mark.map((ma) => arr.push(Number(ma[1])))
+
+  let totalMark = arr.reduce((perv, curr) => (curr = curr + perv), 0)
+
+  let action = ""
+
+  if (totalMark >= 600 && totalMark <= 700) {
+    action = "Exellent "
+  } else if (totalMark > 500 && totalMark <= 599) {
+    action = "Very Good"
+  } else if (totalMark > 400 && totalMark <= 499) {
+    action = "Good"
+  } else if (totalMark > 300 && totalMark <= 399) {
+    action = "Medium"
+  } else if (totalMark > 0 && totalMark <= 299) {
+    action = "Poor"
+  } else {
+    action = ""
+  }
+
   return (
-    <Link to={`student/${"1245866"}`}>
+    <Link to={`student/${id}`}>
       <li>
-        <span className={styles["each-name"]}>Samuel Tale Dejene</span>
-        <span className={styles["each-gender"]}>M</span>
-        <span className={styles["each-gender"]}>A</span>
-        <span className={styles["each-school"]}>Mehal Meda primary school</span>
-        <span className={styles["each-gender"]}>600/700</span>
-        <span className={styles["each-action"]}>
-          <svg
-            stroke="currentColor"
-            fill="currentColor"
-            strokeWidth="0"
-            viewBox="0 0 24 24"
-            height="1em"
-            width="1em"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path d="M13 5h9v2h-9zM2 7h7v2h2V3H9v2H2zm7 10h13v2H9zm10-6h3v2h-3zm-2 4V9.012h-2V11H2v2h13v2zM7 21v-6H5v2H2v2h3v2z"></path>
-          </svg>
-          <svg
-            stroke="currentColor"
-            fill="currentColor"
-            strokeWidth="0"
-            viewBox="0 0 24 24"
-            height="1em"
-            width="1em"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path d="M13 5h9v2h-9zM2 7h7v2h2V3H9v2H2zm7 10h13v2H9zm10-6h3v2h-3zm-2 4V9.012h-2V11H2v2h13v2zM7 21v-6H5v2H2v2h3v2z"></path>
-          </svg>
-        </span>
+        <span className={styles["each-name"]}>{capitalizedName(fullName)}</span>
+        <span className={styles["each-gender"]}>{gender}</span>
+        <span className={styles["each-gender"]}>{section}</span>
+        <span className={styles["each-school"]}>{capitalizedName(school)}</span>
+        <span className={styles["each-gender"]}>{`${totalMark}/700`}</span>
+        <span className={styles["each-action"]}>{action}</span>
       </li>
     </Link>
   )
+}
+
+List.propTypes = {
+  fullName: PropTypes.string,
+  gender: PropTypes.string,
+  section: PropTypes.string,
+  school: PropTypes.string,
+  id: PropTypes.string,
+  mark: PropTypes.array,
 }
 export default Database

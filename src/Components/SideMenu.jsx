@@ -27,6 +27,7 @@ function SideMenu() {
         />
         <LinkMenu
           title="User"
+          to="/users"
           icon={
             <svg
               stroke="currentColor"

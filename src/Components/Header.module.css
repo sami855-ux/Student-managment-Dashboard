@@ -15,7 +15,8 @@
   font-size: 12px;
   font-weight: 500;
   font-family: monstera;
-  color: rgb(80, 77, 77);
+  color: var(--secondary-text-color);
+  /* color: rgb(80, 77, 77); */
 }
 .searchWrap {
   width: 600px;
@@ -27,7 +28,7 @@
 .search {
   width: 340px;
   height: 70%;
-  background-color: #ffffff;
+  background-color: var(--secondary-bg);
   border: 1px solid #fffefe;
   border-radius: 7px;
   display: flex;
@@ -49,7 +50,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #fff;
+  background-color: var(--secondary-bg);
   border-radius: 4px;
   padding: 1px;
   cursor: pointer;

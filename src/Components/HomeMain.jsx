@@ -1,5 +1,11 @@
 import styles from "./HomeMain.module.css"
 
+function randomNumber() {
+  const random = Math.ceil(Math.random() * 3)
+
+  return random
+}
+
 function HomeMain() {
   return (
     <div className={styles.wrapper}>
@@ -44,10 +50,18 @@ function MainOne() {
 }
 
 function ActivityList() {
+  let image = [
+    "public/img/bg.jpg",
+    "public/img/img-1.jpg",
+    "public/img/img-2.jpg",
+    "public/img/koala.png",
+  ]
+
+  console.log(randomNumber())
   return (
     <li className={styles.activity}>
       <span>
-        <img src="public/img/bg.jpg" alt="" />
+        <img src={image[randomNumber()]} alt="" />
       </span>
       <div>
         <p>Admin user created</p>

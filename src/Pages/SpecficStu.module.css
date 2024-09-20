@@ -7,17 +7,20 @@
 .arrowBack {
   font-size: 30px;
   display: block;
-  width: 30px;
+  width: 150px;
   height: 30px;
   cursor: pointer;
   margin-bottom: 15px;
-  border-radius: 50%;
+
   display: flex;
-  justify-content: center;
   align-items: center;
 }
-.arrowBack:hover {
-  background-color: rgb(58, 241, 67);
+.arrowBack span {
+  font-size: 13px;
+  color: #3e3b3b;
+  font-weight: 600;
+  padding-top: 3px;
+  margin-left: 7px;
 }
 .wrapper > h2 {
   font-weight: 600;

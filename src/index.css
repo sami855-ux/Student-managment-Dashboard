@@ -6,6 +6,13 @@
   font-family: poppins;
   src: url(../public/font/Poppins-Regular.ttf);
 }
+
+:root {
+  --primary-bg: #f6f6f6;
+  --secondary-bg: #fff;
+  --text-color: #333;
+  --secondary-text-color: #464545;
+}
 * {
   padding: 0;
   margin: 0;
@@ -13,5 +20,6 @@
   font-family: poppins;
 }
 body {
-  background-color: #f6f6f6;
+  background-color: var(--primary-bg);
+  color: var(--text-color);
 }
