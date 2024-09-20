@@ -1,5 +1,11 @@
 const postData = [
   {
+    id: "post006",
+    action: "Qunatum computing: A new era of computing",
+    date: "2024-09-20T04:10:23.737Z",
+    Author: "Jhon Doe",
+  },
+  {
     id: "post001",
     action: "Machine learing: powering intellehent system",
     date: "2024-09-20T04:10:23.737Z",
@@ -12,10 +18,22 @@ const postData = [
     Author: "john smith",
   },
   {
+    id: "post006",
+    action: "Qunatum computing: A new era of computing",
+    date: "2024-09-20T04:10:23.737Z",
+    Author: "Jhon Doe",
+  },
+  {
     id: "post003",
     action: "Artifical neural network: Mimicking the human brian",
     date: "2024-09-20T04:10:23.737Z",
     Author: "James Tylor",
+  },
+  {
+    id: "post006",
+    action: "Qunatum computing: A new era of computing",
+    date: "2024-09-20T04:10:23.737Z",
+    Author: "Jhon Doe",
   },
   {
     id: "post004",
@@ -28,6 +46,18 @@ const postData = [
     action: "5G technology: The next generation of internet",
     date: "2024-09-20T04:10:23.737Z",
     Author: "Isabelle smith",
+  },
+  {
+    id: "post006",
+    action: "Qunatum computing: A new era of computing",
+    date: "2024-09-20T04:10:23.737Z",
+    Author: "Jhon Doe",
+  },
+  {
+    id: "post001",
+    action: "Machine learing: powering intellehent system",
+    date: "2024-09-20T04:10:23.737Z",
+    Author: "Samuel tale",
   },
   {
     id: "post006",
